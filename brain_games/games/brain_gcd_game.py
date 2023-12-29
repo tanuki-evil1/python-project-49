@@ -1,11 +1,10 @@
-from .text_engine import *
+from .engine_game import *
 from random import randint
 from math import gcd
 
 
 def gcd_game(name):
-    count_correct_answers = 0
-    while count_correct_answers < 3:
+    for _ in range(3):
         num1 = randint(1, 50)
         num2 = randint(1, 10)
 
@@ -16,7 +15,6 @@ def gcd_game(name):
 
         if user_answer == answer:
             correct()
-            count_correct_answers += 1
         else:
             wrong_answer(name, user_answer, answer)
             break
