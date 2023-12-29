@@ -4,7 +4,7 @@ from brain_games.games.brain_even_game import even_game
 
 def main():
     name = welcome_user()
-    print('Answer "yes" if the number is even, otherwise answer "no".')
+    print('Find the greatest common divisor of given numbers.')
     even_game(name)
 
 

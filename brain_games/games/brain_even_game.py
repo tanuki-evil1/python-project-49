@@ -1,5 +1,5 @@
 from random import randint
-from text_engine import *
+from .text_engine import *
 
 
 def even_game(name):
