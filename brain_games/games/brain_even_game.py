@@ -3,8 +3,8 @@ import brain_games.games.engine_game as engine_game
 from random import randint
 
 
-def even_game(name):
-    for _ in range(3):
+def even_game(name: str) -> None:
+    for _ in range(engine_game.CONGRATULATIONS_COUNT):
         num = randint(1, 100)
         answer = 'no' if num % 2 else 'yes'
 
@@ -15,6 +15,6 @@ def even_game(name):
             engine_game.correct()
         else:
             engine_game.wrong_answer(name, user_answer, answer)
-            return False
+            break
     else:
         engine_game.congratulations(name)

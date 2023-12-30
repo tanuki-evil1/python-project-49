@@ -4,7 +4,7 @@ from brain_games.games.brain_progression_game import progression_game
 from brain_games.cli import get_user_name
 
 
-def main():
+def main() -> None:
     welcome()
     name = get_user_name()
     print("What number is missing in the progression?")

@@ -3,8 +3,8 @@ import brain_games.games.engine_game as engine_game
 from random import randint, choice
 
 
-def progression_game(name):
-    for _ in range(3):
+def progression_game(name: str) -> None:
+    for _ in range(engine_game.CONGRATULATIONS_COUNT):
         num1 = randint(1, 20)
         step = randint(1, 20)
         length = randint(5, 10)

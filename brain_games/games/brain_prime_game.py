@@ -3,7 +3,7 @@ import brain_games.games.engine_game as engine_game
 from random import randint
 
 
-def is_prime(num):
+def is_prime(num: int) -> str:
     if num == 2:
         return 'yes'
 
@@ -13,8 +13,8 @@ def is_prime(num):
     return 'yes'
 
 
-def prime_game(name):
-    for _ in range(3):
+def prime_game(name: str) -> None:
+    for _ in range(engine_game.CONGRATULATIONS_COUNT):
         num1 = randint(1, 100)
         answer = is_prime(num1)
 

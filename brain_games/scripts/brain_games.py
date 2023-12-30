@@ -2,11 +2,11 @@
 from brain_games.cli import get_user_name
 
 
-def welcome():
+def welcome() -> None:
     print("Welcome to the Brain Games!")
 
 
-def main():
+def main() -> None:
     welcome()
     get_user_name()
 

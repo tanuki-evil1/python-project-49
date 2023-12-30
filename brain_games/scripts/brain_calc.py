@@ -4,7 +4,7 @@ from brain_games.cli import get_user_name
 from brain_games.games.brain_calc_game import calc_game
 
 
-def main():
+def main() -> None:
     welcome()
     name = get_user_name()
     print('What is the result of the expression?')

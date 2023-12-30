@@ -4,8 +4,8 @@ from random import randint
 from math import gcd
 
 
-def gcd_game(name):
-    for _ in range(3):
+def gcd_game(name: str) -> None:
+    for _ in range(engine_game.CONGRATULATIONS_COUNT):
         num1 = randint(1, 50)
         num2 = randint(1, 10)
 

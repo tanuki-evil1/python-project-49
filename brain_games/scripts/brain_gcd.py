@@ -4,7 +4,7 @@ from brain_games.games.brain_gcd_game import gcd_game
 from brain_games.cli import get_user_name
 
 
-def main():
+def main() -> None:
     welcome()
     name = get_user_name()
     print("Find the greatest common divisor of given numbers.")

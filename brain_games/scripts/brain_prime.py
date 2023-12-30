@@ -4,7 +4,7 @@ from brain_games.games.brain_prime_game import prime_game
 from brain_games.cli import get_user_name
 
 
-def main():
+def main() -> None:
     welcome()
     name = get_user_name()
     print('Answer "yes" if given number is prime. Otherwise answer "no".')

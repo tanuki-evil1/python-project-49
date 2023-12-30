@@ -4,10 +4,10 @@ import brain_games.games.engine_game as engine_game
 from random import randint, choice
 
 
-def calc_game(name):
+def calc_game(name: str) -> None:
     operators = [('+', operator.add), ('*', operator.mul), ('-', operator.sub)]
 
-    for _ in range(3):
+    for _ in range(engine_game.CONGRATULATIONS_COUNT):
         num1 = randint(1, 50)
         num2 = randint(1, 10)
         op_text, op = choice(operators)
