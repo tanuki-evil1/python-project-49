@@ -1,19 +1,24 @@
-import operator
 import brain_games.games.engine_game as engine_game
 
-from random import randint, choice
+from random import randint
 
 
-def calc_game(name):
-    operators = [('+', operator.add), ('*', operator.mul), ('-', operator.sub)]
+def is_prime(num):
+    if num == 2:
+        return 'yes'
 
+    for i in range(3, num):
+        if num % i == 0:
+            return 'no'
+    return 'yes'
+
+
+def prime_game(name):
     for _ in range(3):
-        num1 = randint(1, 50)
-        num2 = randint(1, 10)
-        op_text, op = choice(operators)
-        answer = str(op(num1, num2))
+        num1 = randint(1, 100)
+        answer = is_prime(num1)
 
-        engine_game.question(f'{num1} {op_text} {num2}')
+        engine_game.question(str(num1))
         user_answer = engine_game.get_user_answer()
 
         if user_answer == answer:

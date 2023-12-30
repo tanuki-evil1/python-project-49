@@ -1,4 +1,5 @@
-from .engine_game import *
+import brain_games.games.engine_game as engine_game
+
 from random import randint, choice
 
 
@@ -12,13 +13,13 @@ def progression_game(name):
         answer = choice(progression)
         progression[progression.index(answer)] = '..'
 
-        question(' '.join(progression))
-        user_answer = get_user_answer()
+        engine_game.question(' '.join(progression))
+        user_answer = engine_game.get_user_answer()
 
         if user_answer == answer:
-            correct()
+            engine_game.correct()
         else:
-            wrong_answer(name, user_answer, answer)
+            engine_game.wrong_answer(name, user_answer, answer)
             break
     else:
-        congratulations(name)
+        engine_game.congratulations(name)

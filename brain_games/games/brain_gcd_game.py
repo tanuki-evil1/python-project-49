@@ -1,4 +1,5 @@
-from .engine_game import *
+import brain_games.games.engine_game as engine_game
+
 from random import randint
 from math import gcd
 
@@ -10,13 +11,13 @@ def gcd_game(name):
 
         answer = str(gcd(num1, num2))
 
-        question(f'{num1} {num2}')
-        user_answer = get_user_answer()
+        engine_game.question(f'{num1} {num2}')
+        user_answer = engine_game.get_user_answer()
 
         if user_answer == answer:
-            correct()
+            engine_game.correct()
         else:
-            wrong_answer(name, user_answer, answer)
+            engine_game.wrong_answer(name, user_answer, answer)
             break
     else:
-        congratulations(name)
+        engine_game.congratulations(name)
