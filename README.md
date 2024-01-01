@@ -1,5 +1,6 @@
 ### Hexlet tests and linter status:
 [![Actions Status](https://github.com/tanuki-evil1/python-project-49/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/tanuki-evil1/python-project-49/actions)
+[![Maintainability](https://api.codeclimate.com/v1/badges/6feb0cfc7b4fdbd2601e/maintainability)](https://codeclimate.com/github/tanuki-evil1/python-project-49/maintainability)
 #### "Brain Games" project with 5 different math games!
 
 ##### Requirements:
