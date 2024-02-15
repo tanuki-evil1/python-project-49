@@ -2,7 +2,9 @@ from random import randint
 
 
 def is_prime(num: int) -> bool:
-    if num == 2:
+    if num == 1:
+        return False
+    elif num == 2:
         return True
 
     for i in range(2, num):
@@ -12,7 +14,7 @@ def is_prime(num: int) -> bool:
 
 
 def get_answer() -> tuple:
-    num1 = randint(1, 100)
+    num1 = 1
     answer = 'yes' if is_prime(num1) else 'no'
     question = str(num1)
     return question, answer
