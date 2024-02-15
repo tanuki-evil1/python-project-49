@@ -13,18 +13,9 @@ def is_prime(num: int) -> str:
     return 'yes'
 
 
-def prime_game(name: str) -> None:
-    for _ in range(engine_game.CONGRATULATIONS_COUNT):
-        num1 = randint(1, 100)
-        answer = is_prime(num1)
+def prime_game() -> str:
+    num1 = randint(1, 100)
+    answer = is_prime(num1)
 
-        engine_game.question(str(num1))
-        user_answer = engine_game.get_user_answer()
-
-        if user_answer == answer:
-            engine_game.correct()
-        else:
-            engine_game.wrong_answer(name, user_answer, answer)
-            break
-    else:
-        engine_game.congratulations(name)
+    engine_game.question(str(num1))
+    return answer

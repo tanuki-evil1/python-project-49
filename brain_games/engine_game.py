@@ -22,3 +22,17 @@ def question(text: str) -> None:
 
 def get_user_answer() -> str:
     return prompt.string('Your answer: ')
+
+
+def game_ready(game, name):
+    for _ in range(CONGRATULATIONS_COUNT):
+        answer = game()
+        user_answer = get_user_answer()
+
+        if user_answer == answer:
+            correct()
+        else:
+            wrong_answer(name, user_answer, answer)
+            break
+    else:
+        congratulations(name)
