@@ -7,7 +7,7 @@ def is_prime(num: int) -> str:
     if num == 2:
         return 'yes'
 
-    for i in range(3, num):
+    for i in range(2, num):
         if num % i == 0:
             return 'no'
     return 'yes'
