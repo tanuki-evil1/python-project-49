@@ -1,11 +1,12 @@
-import brain_games.engine_game as engine_game
-
 from random import randint
 
 
-def even_game() -> str:
-    num = randint(1, 100)
-    answer = 'no' if num % 2 else 'yes'
-    engine_game.question(str(num))
+def is_even(num: int) -> bool:
+    return num % 2 == 0
 
-    return answer
+
+def get_answer() -> tuple:
+    num = randint(1, 100)
+    answer = 'yes' if is_even(num) else 'no'
+    question = str(num)
+    return question, answer

@@ -26,7 +26,8 @@ def get_user_answer() -> str:
 
 def game_ready(game, name):
     for _ in range(CONGRATULATIONS_COUNT):
-        answer = game()
+        text_question, answer = game()
+        question(text_question)
         user_answer = get_user_answer()
 
         if user_answer == answer:
