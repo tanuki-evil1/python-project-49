@@ -1,5 +1,5 @@
 import operator
-import brain_games.games.engine_game as engine_game
+import brain_games.engine_game as engine_game
 
 from random import randint, choice
 
