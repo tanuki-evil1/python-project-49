@@ -8,7 +8,6 @@ def get_answer() -> tuple:
     num1 = randint(1, 50)
     num2 = randint(1, 10)
     op_text, op = choice(operators)
-    
     answer = str(op(num1, num2))
     question = f'{num1} {op_text} {num2}'
     return question, answer
