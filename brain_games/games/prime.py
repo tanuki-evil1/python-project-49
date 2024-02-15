@@ -14,7 +14,7 @@ def is_prime(num: int) -> bool:
 
 
 def get_answer() -> tuple:
-    num1 = 1
+    num1 = randint(1, 100)
     answer = 'yes' if is_prime(num1) else 'no'
     question = str(num1)
     return question, answer
