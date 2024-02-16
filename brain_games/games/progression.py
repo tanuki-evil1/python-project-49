@@ -2,7 +2,7 @@ from random import randint, choice
 
 
 def get_data() -> tuple:
-    question_text = "What number is missing in the progression?"
+    question_text = "What number is missing in the progression?\n"
     num1 = randint(1, 20)
     step = randint(1, 20)
     length = randint(5, 10)
