@@ -9,8 +9,9 @@ def get_user_answer() -> str:
 
 def run_game(game, name):
     for _ in range(GAMES_COUNT):
-        question, answer = game()
-        print(f'Question: {question}')
+        question_text, question_exp, answer = game()
+        print(question_text)
+        print(f'Question: {question_exp}')
         user_answer = get_user_answer()
 
         if user_answer == answer:
