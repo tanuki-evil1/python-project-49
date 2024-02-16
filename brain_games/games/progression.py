@@ -10,5 +10,5 @@ def get_data() -> tuple:
     progression = list(map(str, range(num1, num1 + step * length, step)))
     answer = choice(progression)
     progression[progression.index(answer)] = '..'
-    question_exp = question_text + ' '.join(progression)
+    question_exp = ' '.join(progression)
     return question_text, question_exp, answer

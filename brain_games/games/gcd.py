@@ -7,5 +7,5 @@ def get_data() -> tuple:
     num1 = randint(1, 50)
     num2 = randint(1, 10)
     answer = str(gcd(num1, num2))
-    question_exp = question_text + f'{num1} {num2}'
+    question_exp = f'{num1} {num2}'
     return question_text, question_exp, answer
