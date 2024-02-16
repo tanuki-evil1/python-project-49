@@ -13,8 +13,9 @@ def is_prime(num: int) -> bool:
     return True
 
 
-def get_answer() -> tuple:
+def get_data() -> tuple:
+    question_text = 'Answer "yes" if given number is prime. Otherwise answer "no".'
     num1 = randint(1, 100)
     answer = 'yes' if is_prime(num1) else 'no'
-    question = str(num1)
+    question = question_text + str(num1)
     return question, answer

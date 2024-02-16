@@ -1,39 +1,23 @@
 import prompt
 
-CONGRATULATIONS_COUNT = 3
-
-
-def congratulations(name: str) -> None:
-    print(f'Congratulations, {name}!')
-
-
-def wrong_answer(name: str, user_answer: str, answer: str) -> None:
-    print(f"'{user_answer}' is wrong answer ;(. Correct answer was '{answer}'.")
-    print(f"Let's try again, {name}!")
-
-
-def correct() -> None:
-    print('Correct!')
-
-
-def question(text: str) -> None:
-    print(f'Question: {text}')
+GAMES_COUNT = 3
 
 
 def get_user_answer() -> str:
     return prompt.string('Your answer: ')
 
 
-def game_ready(game, name):
-    for _ in range(CONGRATULATIONS_COUNT):
-        text_question, answer = game()
-        question(text_question)
+def run_game(game, name):
+    for _ in range(GAMES_COUNT):
+        question, answer = game()
+        print(f'Question: {question}')
         user_answer = get_user_answer()
 
         if user_answer == answer:
-            correct()
+            print('Correct!')
         else:
-            wrong_answer(name, user_answer, answer)
+            print(f"'{user_answer}' is wrong answer ;(. Correct answer was '{answer}'.")
+            print(f"Let's try again, {name}!")
             break
     else:
-        congratulations(name)
+        print(f'Congratulations, {name}!')
