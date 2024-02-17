@@ -7,6 +7,13 @@
 1. python = ^3.10
 2. prompt = ^0.4.1
 
+##### Installation:
+1. Clone the project
+2. Go to the project directory
+3. make install
+4. make build
+5. make package-install
+
 ##### Even game
 [![asciicast](https://asciinema.org/a/kMQeKUaciyhwUSJd28J8oXJwH.svg)](https://asciinema.org/a/kMQeKUaciyhwUSJd28J8oXJwH)
 
