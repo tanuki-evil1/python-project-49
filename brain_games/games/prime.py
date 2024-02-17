@@ -25,4 +25,3 @@ def get_data() -> tuple:
     num, answer = get_answer()
     question_exp = str(num)
     return QUESTION_TEXT, question_exp, answer
-
