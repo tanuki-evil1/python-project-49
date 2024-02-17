@@ -10,10 +10,23 @@
 ##### Installation:
 1. Clone the project
 2. Go to the project directory
+<<<<<<< Updated upstream
 3. make install
 4. make build
 5. make package-install
 
+=======
+```commandline
+3. make install
+```
+```commandline
+4. make build
+```
+```commandline
+5. make package-install
+```
+# Перезаписать
+>>>>>>> Stashed changes
 ##### Even game
 [![asciicast](https://asciinema.org/a/kMQeKUaciyhwUSJd28J8oXJwH.svg)](https://asciinema.org/a/kMQeKUaciyhwUSJd28J8oXJwH)
 

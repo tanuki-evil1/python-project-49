@@ -1,11 +1,16 @@
 from random import randint
 from math import gcd
 
+QUESTION_TEXT = "Find the greatest common divisor of given numbers."
 
-def get_data() -> tuple:
-    question_text = "Find the greatest common divisor of given numbers."
+
+def get_gcd() -> tuple:
     num1 = randint(1, 50)
     num2 = randint(1, 10)
-    answer = str(gcd(num1, num2))
+    return num1, num2, str(gcd(num1, num2))
+
+
+def get_data() -> tuple:
+    num1, num2, answer = get_gcd()
     question_exp = f'{num1} {num2}'
-    return question_text, question_exp, answer
+    return QUESTION_TEXT, question_exp, answer
