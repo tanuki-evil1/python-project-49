@@ -1,14 +1,18 @@
 from random import randint, choice
 
 
-def get_data() -> tuple:
-    question_text = "What number is missing in the progression?"
-    num1 = randint(1, 20)
+def get_progression() -> tuple:
+    num = randint(1, 20)
     step = randint(1, 20)
     length = randint(5, 10)
+    progression = list(map(str, range(num, num + step * length, step)))
+    return progression, choice(progression)
 
-    progression = list(map(str, range(num1, num1 + step * length, step)))
-    answer = choice(progression)
+
+def get_data() -> tuple:
+    question_text = "What number is missing in the progression?"
+
+    progression, answer = get_progression()
     progression[progression.index(answer)] = '..'
     question_exp = ' '.join(progression)
     return question_text, question_exp, answer
