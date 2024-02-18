@@ -7,7 +7,7 @@ def get_user_answer() -> str:
     return prompt.string('Your answer: ')
 
 
-def run_game(game, name):
+def run_game(game, name) -> None:
     for _ in range(GAMES_COUNT):
         question_text, question_exp, answer = game()
         print(question_text)
